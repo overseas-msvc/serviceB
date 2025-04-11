@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ab
+  labels:
+    app: main
+    service: ab
+spec:
+  selector:
+    app: main
+    service: ab
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
+  type: ClusterIP
